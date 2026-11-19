@@ -1,0 +1,291 @@
+{
+  "schema_version": "0.2.0",
+  "id": "AROMA-000002",
+  "slug": "acetaldehyde",
+  "card_version": 1,
+  "status": "measured",
+  "panel_role": "panel",
+  "contributed_by": [
+    "breath"
+  ],
+  "identity": {
+    "status": "partial",
+    "name": "Acetaldehyde",
+    "chemical_class": "Aldehyde",
+    "formula": "C2H4O",
+    "monoisotopic_mass": 44.0262,
+    "adducts": [
+      {
+        "adduct": "[M+H]+",
+        "mz": 45.0335,
+        "basis": "calculated"
+      },
+      {
+        "adduct": "M+. (EI)",
+        "mz": 44.0257,
+        "basis": "calculated"
+      }
+    ],
+    "smiles": "CC=O",
+    "inchikey": "IKHGUXGNUITLKF-UHFFFAOYSA-N",
+    "reported_odour": {
+      "text": "ethereal; winey (Arctander 1960, via Pyrfume)",
+      "reference": null
+    },
+    "identification": {
+      "status": "pending"
+    },
+    "cross_links": {
+      "pubchem_cid": "177",
+      "hmdb": null,
+      "chebi": null,
+      "chembl": null,
+      "csd_refcode": null
+    }
+  },
+  "shape": {
+    "status": "partial",
+    "summary": {
+      "ccs": {
+        "value": 123.9,
+        "unit": "Å²",
+        "expanded_uncertainty": 1.1
+      },
+      "method": "DTIMS_stepped_field",
+      "calibrant": "single field",
+      "labs": [
+        "UOM",
+        "UOR"
+      ],
+      "n_labs": 2,
+      "basis": "mean of laboratory means, expanded uncertainty two times the between-laboratory SD"
+    },
+    "ccs_measured": [
+      {
+        "adduct": "[M+H]+",
+        "buffer_gas": "N2",
+        "method": "DTIMS_stepped_field",
+        "ccs": {
+          "value": 124.3,
+          "unit": "Å²",
+          "expanded_uncertainty": 1.0
+        },
+        "lab": "UOM",
+        "calibrant": "single field",
+        "confidence": "as submitted"
+      },
+      {
+        "adduct": "[M+H]+",
+        "buffer_gas": "N2",
+        "method": "DTIMS_stepped_field",
+        "ccs": {
+          "value": 123.5,
+          "unit": "Å²",
+          "expanded_uncertainty": 1.0
+        },
+        "lab": "UOR",
+        "calibrant": "single field",
+        "confidence": "as submitted"
+      }
+    ],
+    "ccs_predicted": []
+  },
+  "detectability": {
+    "status": "partial",
+    "by_platform": [
+      {
+        "lab": "EES",
+        "platform": "GCMS",
+        "lod": {
+          "value": 1.1,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 3.34,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9997
+        }
+      },
+      {
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "lod": {
+          "value": 0.733,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 2.22,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9999
+        }
+      },
+      {
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "lod": {
+          "value": 1.0,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 3.04,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9996
+        }
+      },
+      {
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "lod": {
+          "value": 1.75,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 5.31,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9992
+        }
+      }
+    ],
+    "not_detected": []
+  },
+  "matrix_effect": {
+    "status": "partial",
+    "by_matrix": [
+      {
+        "matrix": "breath",
+        "lab": "EES",
+        "platform": "GCMS",
+        "response_relative_to_neat": {
+          "value": 0.678,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.6,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "response_relative_to_neat": {
+          "value": 0.897,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.382,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "response_relative_to_neat": {
+          "value": 0.806,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.82,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "response_relative_to_neat": {
+          "value": 0.871,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.714,
+          "unit": "fold"
+        }
+      }
+    ]
+  },
+  "perception": {
+    "status": "pending",
+    "summary": {}
+  },
+  "provenance": {
+    "status": "partial",
+    "sops": [
+      {
+        "id": "SOP-EES-01",
+        "version": "1.0",
+        "lab": "EES"
+      },
+      {
+        "id": "SOP-LU-01",
+        "version": "1.0",
+        "lab": "LU"
+      },
+      {
+        "id": "SOP-UOM-01",
+        "version": "1.0",
+        "lab": "UOM"
+      },
+      {
+        "id": "SOP-WYT-01",
+        "version": "1.0",
+        "lab": "WYT"
+      }
+    ],
+    "labs": [
+      "EES",
+      "LU",
+      "UOM",
+      "WYT"
+    ],
+    "run_count": 84,
+    "blank_runs": 4,
+    "failed_runs": 0,
+    "file_counts": {
+      "raw_vendor": 84
+    },
+    "qc_flags": []
+  },
+  "derivation": {
+    "lod_definition": "LOD-LOQ v0.1",
+    "built_from": "DEMO-SYNTHETIC-0"
+  },
+  "release_id": "DEMO-SYNTHETIC-0"
+}

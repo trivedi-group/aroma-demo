@@ -1,0 +1,209 @@
+{
+  "schema_version": "0.2.0",
+  "id": "AROMA-000016",
+  "slug": "6-methyl-5-hepten-2-one",
+  "card_version": 1,
+  "status": "measured",
+  "panel_role": "panel",
+  "contributed_by": [
+    "skin_sebum"
+  ],
+  "identity": {
+    "status": "partial",
+    "name": "6-Methyl-5-hepten-2-one",
+    "chemical_class": "Ketone",
+    "formula": "C8H14O",
+    "monoisotopic_mass": 126.1045,
+    "adducts": [
+      {
+        "adduct": "[M+H]+",
+        "mz": 127.1117,
+        "basis": "calculated"
+      },
+      {
+        "adduct": "M+. (EI)",
+        "mz": 126.1039,
+        "basis": "calculated"
+      }
+    ],
+    "smiles": "CC(=O)CCC=C(C)C",
+    "inchikey": "UHEPJGULSIKKTP-UHFFFAOYSA-N",
+    "reported_odour": {
+      "text": "fruity; green; herbal; oily (Arctander 1960, via Pyrfume)",
+      "reference": null
+    },
+    "identification": {
+      "status": "pending"
+    },
+    "cross_links": {
+      "pubchem_cid": "9862",
+      "hmdb": null,
+      "chebi": null,
+      "chembl": null,
+      "csd_refcode": null
+    }
+  },
+  "shape": {
+    "status": "pending",
+    "summary": {},
+    "ccs_measured": [],
+    "ccs_predicted": []
+  },
+  "detectability": {
+    "status": "partial",
+    "by_platform": [
+      {
+        "lab": "EES",
+        "platform": "GCMS",
+        "lod": {
+          "value": 0.23,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 0.696,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 1.0
+        }
+      },
+      {
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "lod": {
+          "value": 0.902,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 2.73,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9998
+        }
+      },
+      {
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "lod": {
+          "value": 1.18,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 3.57,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9996
+        }
+      }
+    ],
+    "not_detected": []
+  },
+  "matrix_effect": {
+    "status": "partial",
+    "by_matrix": [
+      {
+        "matrix": "breath",
+        "lab": "EES",
+        "platform": "GCMS",
+        "response_relative_to_neat": {
+          "value": 0.579,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.2,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "response_relative_to_neat": {
+          "value": 0.64,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.601,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "response_relative_to_neat": {
+          "value": 0.614,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.855,
+          "unit": "fold"
+        }
+      }
+    ]
+  },
+  "perception": {
+    "status": "pending",
+    "summary": {}
+  },
+  "provenance": {
+    "status": "partial",
+    "sops": [
+      {
+        "id": "SOP-EES-01",
+        "version": "1.0",
+        "lab": "EES"
+      },
+      {
+        "id": "SOP-UOM-01",
+        "version": "1.0",
+        "lab": "UOM"
+      },
+      {
+        "id": "SOP-WYT-01",
+        "version": "1.0",
+        "lab": "WYT"
+      }
+    ],
+    "labs": [
+      "EES",
+      "UOM",
+      "WYT"
+    ],
+    "run_count": 63,
+    "blank_runs": 3,
+    "failed_runs": 0,
+    "file_counts": {
+      "raw_vendor": 63
+    },
+    "qc_flags": []
+  },
+  "derivation": {
+    "lod_definition": "LOD-LOQ v0.1",
+    "built_from": "DEMO-SYNTHETIC-0"
+  },
+  "release_id": "DEMO-SYNTHETIC-0"
+}

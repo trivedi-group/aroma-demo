@@ -1,0 +1,752 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/olfactocard/schema/0.1.0/olfactocard.schema.json",
+  "title": "OlfactoCard",
+  "description": "One record per compound. Six sections follow the Sprint minimum content: identity, shape, detectability, matrix effect, perception and provenance. Fields that have not been measured are left empty and the section status is pending, never filled with placeholder numbers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "slug",
+    "card_version",
+    "status",
+    "panel_role",
+    "identity",
+    "shape",
+    "detectability",
+    "matrix_effect",
+    "perception",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^AROMA-[0-9]{6,8}$",
+      "description": "AROMA identifier. Six to eight digits, so the registry can pass one million compounds without a format change."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "card_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "description": "Lifecycle: draft, identity_populated, measured, qc_passed, released. A card is released to AROMA only after it passes QC.",
+      "enum": [
+        "draft",
+        "identity_populated",
+        "measured",
+        "qc_passed",
+        "released"
+      ]
+    },
+    "panel_role": {
+      "enum": [
+        "panel",
+        "anchor",
+        "extender",
+        "control"
+      ]
+    },
+    "contributed_by": {
+      "description": "Matrices in which the compound is expected, as named in the application.",
+      "type": "array",
+      "items": {
+        "enum": [
+          "skin_sebum",
+          "breath",
+          "indoor_air",
+          "outdoor_air",
+          "food"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "identity": {
+      "$ref": "#/$defs/identity"
+    },
+    "shape": {
+      "$ref": "#/$defs/shape"
+    },
+    "detectability": {
+      "$ref": "#/$defs/detectability"
+    },
+    "matrix_effect": {
+      "$ref": "#/$defs/matrix_effect"
+    },
+    "perception": {
+      "$ref": "#/$defs/perception"
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "release_id": {
+      "type": "string",
+      "description": "Release that last changed this card."
+    },
+    "derivation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lod_definition": {
+          "type": "string"
+        },
+        "built_from": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "section_status": {
+      "enum": [
+        "pending",
+        "partial",
+        "complete"
+      ]
+    },
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expanded_uncertainty": {
+          "type": "number",
+          "minimum": 0
+        },
+        "coverage_factor": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "n": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "citation",
+        "doi"
+      ],
+      "properties": {
+        "citation": {
+          "type": "string"
+        },
+        "doi": {
+          "type": "string",
+          "pattern": "^10\\.[0-9]{4,9}/\\S+$"
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "name",
+        "chemical_class",
+        "formula",
+        "monoisotopic_mass",
+        "adducts",
+        "smiles",
+        "inchikey",
+        "reported_odour",
+        "identification",
+        "cross_links"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/section_status"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chemical_class": {
+          "type": "string"
+        },
+        "formula": {
+          "type": "string",
+          "pattern": "^([A-Z][a-z]?[0-9]*)+$"
+        },
+        "monoisotopic_mass": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "adducts": {
+          "description": "Calculated from the formula. Exact m/z follows from the formula and is not a measurement.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "adduct",
+              "mz",
+              "basis"
+            ],
+            "properties": {
+              "adduct": {
+                "type": "string"
+              },
+              "mz": {
+                "type": "number"
+              },
+              "basis": {
+                "const": "calculated"
+              }
+            }
+          }
+        },
+        "smiles": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inchikey": {
+          "type": "string",
+          "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
+        },
+        "reported_odour": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "text",
+            "reference"
+          ],
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "reference": {
+              "description": "Published source for the descriptor. Null means a citation is still to be attached.",
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/reference"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "identification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "complete"
+              ]
+            },
+            "msi_level": {
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "standard_supplier": {
+              "type": "string"
+            },
+            "standard_purity_percent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "internal_standard": {
+              "type": "string"
+            }
+          }
+        },
+        "cross_links": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "pubchem_cid",
+            "hmdb",
+            "chebi",
+            "chembl",
+            "csd_refcode"
+          ],
+          "properties": {
+            "pubchem_cid": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "hmdb": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "chebi": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "chembl": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "csd_refcode": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "shape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "summary",
+        "ccs_measured",
+        "ccs_predicted"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/section_status"
+        },
+        "ccs_measured": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "adduct",
+              "buffer_gas",
+              "method",
+              "ccs",
+              "lab",
+              "confidence"
+            ],
+            "properties": {
+              "adduct": {
+                "type": "string"
+              },
+              "buffer_gas": {
+                "type": "string"
+              },
+              "method": {
+                "type": "string"
+              },
+              "ccs": {
+                "$ref": "#/$defs/quantity"
+              },
+              "lab": {
+                "type": "string"
+              },
+              "instrument": {
+                "type": "string"
+              },
+              "calibrant": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "platform": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ccs_predicted": {
+          "description": "Predicted values are always flagged as predicted and carry the model and a stated uncertainty.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "adduct",
+              "ccs",
+              "model",
+              "model_version"
+            ],
+            "properties": {
+              "adduct": {
+                "type": "string"
+              },
+              "ccs": {
+                "$ref": "#/$defs/quantity"
+              },
+              "model": {
+                "type": "string"
+              },
+              "model_version": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "summary": {
+          "description": "Values shown on the card face: CCS (N2) for [M+H]+, method, calibrant and laboratories.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ccs": {
+              "$ref": "#/$defs/quantity"
+            },
+            "method": {
+              "type": "string"
+            },
+            "calibrant": {
+              "type": "string"
+            },
+            "labs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "n_labs": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "basis": {
+              "type": "string",
+              "description": "How the summary value was derived."
+            }
+          }
+        }
+      }
+    },
+    "detectability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "by_platform",
+        "not_detected"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/section_status"
+        },
+        "by_platform": {
+          "type": "array",
+          "description": "One entry per laboratory, platform and neat measurement, kept separate so platforms can be compared.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "lab",
+              "platform",
+              "lod",
+              "loq"
+            ],
+            "properties": {
+              "lab": {
+                "type": "string"
+              },
+              "platform": {
+                "type": "string"
+              },
+              "lod": {
+                "$ref": "#/$defs/quantity"
+              },
+              "loq": {
+                "$ref": "#/$defs/quantity"
+              },
+              "linearity": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "range_low",
+                  "range_high",
+                  "unit"
+                ],
+                "properties": {
+                  "range_low": {
+                    "type": "number"
+                  },
+                  "range_high": {
+                    "type": "number"
+                  },
+                  "unit": {
+                    "type": "string"
+                  },
+                  "r_squared": {
+                    "type": "number",
+                    "maximum": 1
+                  }
+                }
+              },
+              "n_levels": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "n_runs": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "definition": {
+                "type": "string",
+                "description": "Version of the LOD and LOQ definition used."
+              }
+            }
+          }
+        },
+        "not_detected": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "lab",
+              "platform"
+            ],
+            "properties": {
+              "lab": {
+                "type": "string"
+              },
+              "platform": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "matrix_effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "by_matrix"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/section_status"
+        },
+        "by_matrix": {
+          "type": "array",
+          "description": "One entry per matrix, laboratory and platform, each relative to the same laboratory and platform neat.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "matrix",
+              "lab",
+              "platform",
+              "response_relative_to_neat"
+            ],
+            "properties": {
+              "matrix": {
+                "type": "string"
+              },
+              "lab": {
+                "type": "string"
+              },
+              "platform": {
+                "type": "string"
+              },
+              "response_relative_to_neat": {
+                "$ref": "#/$defs/quantity"
+              },
+              "lod_shift_fold": {
+                "$ref": "#/$defs/quantity"
+              },
+              "n_levels": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "perception": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "summary"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/section_status"
+        },
+        "concentration_dependent_quality": {
+          "description": "Published concentration-dependent descriptors, shown as literature and kept apart from Sprint measurements.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "regime",
+              "descriptor",
+              "reference"
+            ],
+            "properties": {
+              "regime": {
+                "enum": [
+                  "trace",
+                  "higher"
+                ]
+              },
+              "descriptor": {
+                "type": "string"
+              },
+              "reference": {
+                "$ref": "#/$defs/reference"
+              }
+            }
+          }
+        },
+        "summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "detection_level": {
+              "$ref": "#/$defs/quantity"
+            },
+            "quality_change_level": {
+              "$ref": "#/$defs/quantity"
+            },
+            "gco_neat": {
+              "$ref": "#/$defs/quantity"
+            },
+            "gco_in_matrix": {
+              "$ref": "#/$defs/quantity"
+            },
+            "intensity": {
+              "type": "number"
+            },
+            "intensity_scale": {
+              "type": "string"
+            },
+            "descriptor": {
+              "type": "string"
+            },
+            "assessors_n": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "lexicon_version": {
+              "type": "string"
+            },
+            "level_unit": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "sops",
+        "labs",
+        "run_count",
+        "file_counts",
+        "qc_flags",
+        "failed_runs",
+        "blank_runs"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/section_status"
+        },
+        "sops": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "version",
+              "lab"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              },
+              "lab": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "labs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "run_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blank_runs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed_runs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "file_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "qc_flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "raw_data_doi": {
+          "type": "string",
+          "pattern": "^10\\.[0-9]{4,9}/\\S+$"
+        }
+      }
+    }
+  }
+}

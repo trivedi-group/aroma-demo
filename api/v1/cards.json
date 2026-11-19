@@ -1,0 +1,670 @@
+{
+  "schema_version": "0.1.0",
+  "count": 29,
+  "cards": [
+    {
+      "id": "AROMA-000001",
+      "slug": "indole",
+      "name": "Indole",
+      "formula": "C8H7N",
+      "monoisotopic_mass": 117.0578,
+      "chemical_class": "Nitrogen heterocycle",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "floral, jasmine at trace level, faecal when concentrated",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/indole.json"
+    },
+    {
+      "id": "AROMA-000002",
+      "slug": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "monoisotopic_mass": 44.0262,
+      "chemical_class": "Aldehyde",
+      "contributed_by": [
+        "breath"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "ethereal; winey (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/acetaldehyde.json"
+    },
+    {
+      "id": "AROMA-000003",
+      "slug": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "monoisotopic_mass": 58.0419,
+      "chemical_class": "Ketone",
+      "contributed_by": [
+        "breath"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "ethereal (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/acetone.json"
+    },
+    {
+      "id": "AROMA-000004",
+      "slug": "trimethylamine",
+      "name": "Trimethylamine",
+      "formula": "C3H9N",
+      "monoisotopic_mass": 59.0735,
+      "chemical_class": "Volatile amine",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "anchor",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/trimethylamine.json"
+    },
+    {
+      "id": "AROMA-000005",
+      "slug": "dimethyl-sulfide",
+      "name": "Dimethyl sulfide",
+      "formula": "C2H6S",
+      "monoisotopic_mass": 62.019,
+      "chemical_class": "Organosulfur",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "green (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/dimethyl-sulfide.json"
+    },
+    {
+      "id": "AROMA-000006",
+      "slug": "isoprene",
+      "name": "Isoprene",
+      "formula": "C5H8",
+      "monoisotopic_mass": 68.0626,
+      "chemical_class": "Hemiterpene",
+      "contributed_by": [
+        "breath",
+        "outdoor_air"
+      ],
+      "panel_role": "anchor",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/isoprene.json"
+    },
+    {
+      "id": "AROMA-000007",
+      "slug": "2-butanone",
+      "name": "2-Butanone",
+      "formula": "C4H8O",
+      "monoisotopic_mass": 72.0575,
+      "chemical_class": "Ketone",
+      "contributed_by": [
+        "breath"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "ethereal (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/2-butanone.json"
+    },
+    {
+      "id": "AROMA-000008",
+      "slug": "3-methylfuran",
+      "name": "3-Methylfuran",
+      "formula": "C5H6O",
+      "monoisotopic_mass": 82.0419,
+      "chemical_class": "Oxygen heterocycle",
+      "contributed_by": [],
+      "panel_role": "control",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/3-methylfuran.json"
+    },
+    {
+      "id": "AROMA-000009",
+      "slug": "butanoic-acid",
+      "name": "Butanoic acid",
+      "formula": "C4H8O2",
+      "monoisotopic_mass": 88.0524,
+      "chemical_class": "Short-chain acid",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "sour (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/butanoic-acid.json"
+    },
+    {
+      "id": "AROMA-000010",
+      "slug": "2-methyl-1-butanol",
+      "name": "2-Methyl-1-butanol",
+      "formula": "C5H12O",
+      "monoisotopic_mass": 88.0888,
+      "chemical_class": "Alcohol",
+      "contributed_by": [
+        "indoor_air"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/2-methyl-1-butanol.json"
+    },
+    {
+      "id": "AROMA-000011",
+      "slug": "toluene",
+      "name": "Toluene",
+      "formula": "C7H8",
+      "monoisotopic_mass": 92.0626,
+      "chemical_class": "Aromatic hydrocarbon",
+      "contributed_by": [
+        "outdoor_air"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/toluene.json"
+    },
+    {
+      "id": "AROMA-000012",
+      "slug": "hexanal",
+      "name": "Hexanal",
+      "formula": "C6H12O",
+      "monoisotopic_mass": 100.0888,
+      "chemical_class": "Aldehyde",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "apple; buttery; fatty; fruity; green; plum (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/hexanal.json"
+    },
+    {
+      "id": "AROMA-000013",
+      "slug": "2-acetyl-1-pyrroline",
+      "name": "2-Acetyl-1-pyrroline",
+      "formula": "C6H9NO",
+      "monoisotopic_mass": 111.0684,
+      "chemical_class": "Nitrogen heterocycle",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/2-acetyl-1-pyrroline.json"
+    },
+    {
+      "id": "AROMA-000014",
+      "slug": "ethyl-butanoate",
+      "name": "Ethyl butanoate",
+      "formula": "C6H12O2",
+      "monoisotopic_mass": 116.0837,
+      "chemical_class": "Ester",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "banana; ethereal; fruity; pineapple (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/ethyl-butanoate.json"
+    },
+    {
+      "id": "AROMA-000015",
+      "slug": "dimethyl-trisulfide",
+      "name": "Dimethyl trisulfide",
+      "formula": "C2H6S3",
+      "monoisotopic_mass": 125.9632,
+      "chemical_class": "Organosulfur",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "ethereal; green (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/dimethyl-trisulfide.json"
+    },
+    {
+      "id": "AROMA-000016",
+      "slug": "6-methyl-5-hepten-2-one",
+      "name": "6-Methyl-5-hepten-2-one",
+      "formula": "C8H14O",
+      "monoisotopic_mass": 126.1045,
+      "chemical_class": "Ketone",
+      "contributed_by": [
+        "skin_sebum"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "fruity; green; herbal; oily (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/6-methyl-5-hepten-2-one.json"
+    },
+    {
+      "id": "AROMA-000017",
+      "slug": "furaneol",
+      "name": "Furaneol",
+      "formula": "C6H8O3",
+      "monoisotopic_mass": 128.0473,
+      "chemical_class": "Furanone",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "caramelic; fruity; pineapple (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/furaneol.json"
+    },
+    {
+      "id": "AROMA-000018",
+      "slug": "3-methyl-2-hexenoic-acid",
+      "name": "3-Methyl-2-hexenoic acid",
+      "formula": "C7H12O2",
+      "monoisotopic_mass": 128.0837,
+      "chemical_class": "Short-chain acid",
+      "contributed_by": [
+        "skin_sebum"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/3-methyl-2-hexenoic-acid.json"
+    },
+    {
+      "id": "AROMA-000019",
+      "slug": "1-octen-3-ol",
+      "name": "1-Octen-3-ol",
+      "formula": "C8H16O",
+      "monoisotopic_mass": 128.1201,
+      "chemical_class": "Alcohol",
+      "contributed_by": [
+        "indoor_air"
+      ],
+      "panel_role": "anchor",
+      "reported_odour": "buttery; earthy; hay; herbal; rose (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/1-octen-3-ol.json"
+    },
+    {
+      "id": "AROMA-000020",
+      "slug": "3-octanone",
+      "name": "3-Octanone",
+      "formula": "C8H16O",
+      "monoisotopic_mass": 128.1201,
+      "chemical_class": "Ketone",
+      "contributed_by": [
+        "indoor_air"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "buttery; fruity; herbal; spicy (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/3-octanone.json"
+    },
+    {
+      "id": "AROMA-000021",
+      "slug": "alpha-pinene",
+      "name": "alpha-Pinene",
+      "formula": "C10H16",
+      "monoisotopic_mass": 136.1252,
+      "chemical_class": "Monoterpene",
+      "contributed_by": [
+        "outdoor_air"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "aromatic; herbal; pine (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/alpha-pinene.json"
+    },
+    {
+      "id": "AROMA-000022",
+      "slug": "limonene",
+      "name": "Limonene",
+      "formula": "C10H16",
+      "monoisotopic_mass": 136.1252,
+      "chemical_class": "Monoterpene",
+      "contributed_by": [
+        "indoor_air"
+      ],
+      "panel_role": "anchor",
+      "reported_odour": "balsamic; citrus; fruity; orange (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/limonene.json"
+    },
+    {
+      "id": "AROMA-000023",
+      "slug": "e-2-nonenal",
+      "name": "(E)-2-Nonenal",
+      "formula": "C9H16O",
+      "monoisotopic_mass": 140.1201,
+      "chemical_class": "Aldehyde",
+      "contributed_by": [
+        "skin_sebum"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/e-2-nonenal.json"
+    },
+    {
+      "id": "AROMA-000024",
+      "slug": "nonanal",
+      "name": "Nonanal",
+      "formula": "C9H18O",
+      "monoisotopic_mass": 142.1358,
+      "chemical_class": "Aldehyde",
+      "contributed_by": [
+        "skin_sebum"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "fatty; floral; rose; waxy (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/nonanal.json"
+    },
+    {
+      "id": "AROMA-000025",
+      "slug": "vanillin",
+      "name": "Vanillin",
+      "formula": "C8H8O3",
+      "monoisotopic_mass": 152.0473,
+      "chemical_class": "Phenolic aldehyde",
+      "contributed_by": [
+        "food"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "creamy; vanillin (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/vanillin.json"
+    },
+    {
+      "id": "AROMA-000026",
+      "slug": "2-isopropyl-3-methoxypyrazine",
+      "name": "2-Isopropyl-3-methoxypyrazine",
+      "formula": "C8H12N2O",
+      "monoisotopic_mass": 152.095,
+      "chemical_class": "Methoxypyrazine",
+      "contributed_by": [
+        "indoor_air"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "partial",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/2-isopropyl-3-methoxypyrazine.json"
+    },
+    {
+      "id": "AROMA-000027",
+      "slug": "geosmin",
+      "name": "Geosmin",
+      "formula": "C12H22O",
+      "monoisotopic_mass": 182.1671,
+      "chemical_class": "Bicyclic terpenoid alcohol",
+      "contributed_by": [
+        "indoor_air"
+      ],
+      "panel_role": "panel",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/geosmin.json"
+    },
+    {
+      "id": "AROMA-000028",
+      "slug": "capsaicin",
+      "name": "Capsaicin",
+      "formula": "C18H27NO3",
+      "monoisotopic_mass": 305.1991,
+      "chemical_class": "Capsaicinoid",
+      "contributed_by": [],
+      "panel_role": "extender",
+      "reported_odour": "herbal (Arctander 1960, via Pyrfume)",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/capsaicin.json"
+    },
+    {
+      "id": "AROMA-000029",
+      "slug": "squalene",
+      "name": "Squalene",
+      "formula": "C30H50",
+      "monoisotopic_mass": 410.3913,
+      "chemical_class": "Triterpene hydrocarbon",
+      "contributed_by": [
+        "skin_sebum"
+      ],
+      "panel_role": "extender",
+      "reported_odour": "",
+      "status": "measured",
+      "sections": {
+        "identity": "partial",
+        "shape": "pending",
+        "detectability": "partial",
+        "matrix_effect": "partial",
+        "perception": "pending",
+        "provenance": "partial"
+      },
+      "url": "api/v1/cards/squalene.json"
+    }
+  ]
+}

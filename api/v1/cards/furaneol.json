@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.2.0",
+  "id": "AROMA-000017",
+  "slug": "furaneol",
+  "card_version": 1,
+  "status": "measured",
+  "panel_role": "panel",
+  "contributed_by": [
+    "food"
+  ],
+  "identity": {
+    "status": "partial",
+    "name": "Furaneol",
+    "chemical_class": "Furanone",
+    "formula": "C6H8O3",
+    "monoisotopic_mass": 128.0473,
+    "adducts": [
+      {
+        "adduct": "[M+H]+",
+        "mz": 129.0546,
+        "basis": "calculated"
+      },
+      {
+        "adduct": "M+. (EI)",
+        "mz": 128.0468,
+        "basis": "calculated"
+      }
+    ],
+    "smiles": "CC1OC(C)=C(O)C1=O",
+    "inchikey": "INAXVXBDKKUCGI-UHFFFAOYSA-N",
+    "reported_odour": {
+      "text": "caramelic; fruity; pineapple (Arctander 1960, via Pyrfume)",
+      "reference": null
+    },
+    "identification": {
+      "status": "pending"
+    },
+    "cross_links": {
+      "pubchem_cid": "19309",
+      "hmdb": null,
+      "chebi": null,
+      "chembl": null,
+      "csd_refcode": null
+    }
+  },
+  "shape": {
+    "status": "partial",
+    "summary": {
+      "ccs": {
+        "value": 170.2,
+        "unit": "Å²",
+        "expanded_uncertainty": 0.71
+      },
+      "method": "DTIMS_stepped_field",
+      "calibrant": "single field",
+      "labs": [
+        "UOM",
+        "UOR"
+      ],
+      "n_labs": 2,
+      "basis": "mean of laboratory means, expanded uncertainty two times the between-laboratory SD"
+    },
+    "ccs_measured": [
+      {
+        "adduct": "[M+H]+",
+        "buffer_gas": "N2",
+        "method": "DTIMS_stepped_field",
+        "ccs": {
+          "value": 170.4,
+          "unit": "Å²",
+          "expanded_uncertainty": 1.0
+        },
+        "lab": "UOM",
+        "calibrant": "single field",
+        "confidence": "as submitted"
+      },
+      {
+        "adduct": "[M+H]+",
+        "buffer_gas": "N2",
+        "method": "DTIMS_stepped_field",
+        "ccs": {
+          "value": 169.9,
+          "unit": "Å²",
+          "expanded_uncertainty": 1.0
+        },
+        "lab": "UOR",
+        "calibrant": "single field",
+        "confidence": "as submitted"
+      }
+    ],
+    "ccs_predicted": []
+  },
+  "detectability": {
+    "status": "partial",
+    "by_platform": [
+      {
+        "lab": "EES",
+        "platform": "GCMS",
+        "lod": {
+          "value": 1.28,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 3.88,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9996
+        }
+      },
+      {
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "lod": {
+          "value": 0.306,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 0.927,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 1.0
+        }
+      },
+      {
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "lod": {
+          "value": 2.49,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 7.54,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9987
+        }
+      }
+    ],
+    "not_detected": []
+  },
+  "matrix_effect": {
+    "status": "partial",
+    "by_matrix": [
+      {
+        "matrix": "breath",
+        "lab": "EES",
+        "platform": "GCMS",
+        "response_relative_to_neat": {
+          "value": 0.904,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.94,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "response_relative_to_neat": {
+          "value": 0.956,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.39,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "response_relative_to_neat": {
+          "value": 0.928,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.388,
+          "unit": "fold"
+        }
+      }
+    ]
+  },
+  "perception": {
+    "status": "pending",
+    "summary": {}
+  },
+  "provenance": {
+    "status": "partial",
+    "sops": [
+      {
+        "id": "SOP-EES-01",
+        "version": "1.0",
+        "lab": "EES"
+      },
+      {
+        "id": "SOP-LU-01",
+        "version": "1.0",
+        "lab": "LU"
+      },
+      {
+        "id": "SOP-UOM-01",
+        "version": "1.0",
+        "lab": "UOM"
+      }
+    ],
+    "labs": [
+      "EES",
+      "LU",
+      "UOM"
+    ],
+    "run_count": 63,
+    "blank_runs": 3,
+    "failed_runs": 0,
+    "file_counts": {
+      "raw_vendor": 63
+    },
+    "qc_flags": []
+  },
+  "derivation": {
+    "lod_definition": "LOD-LOQ v0.1",
+    "built_from": "DEMO-SYNTHETIC-0"
+  },
+  "release_id": "DEMO-SYNTHETIC-0"
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": "0.2.0",
+  "id": "AROMA-000028",
+  "slug": "capsaicin",
+  "card_version": 1,
+  "status": "measured",
+  "panel_role": "extender",
+  "contributed_by": [],
+  "identity": {
+    "status": "partial",
+    "name": "Capsaicin",
+    "chemical_class": "Capsaicinoid",
+    "formula": "C18H27NO3",
+    "monoisotopic_mass": 305.1991,
+    "adducts": [
+      {
+        "adduct": "[M+H]+",
+        "mz": 306.2064,
+        "basis": "calculated"
+      },
+      {
+        "adduct": "M+. (EI)",
+        "mz": 305.1985,
+        "basis": "calculated"
+      }
+    ],
+    "smiles": "COc1cc(CNC(=O)CCCC/C=C/C(C)C)ccc1O",
+    "inchikey": "YKPUWZUDDOIDPM-SOFGYWHQSA-N",
+    "reported_odour": {
+      "text": "herbal (Arctander 1960, via Pyrfume)",
+      "reference": null
+    },
+    "identification": {
+      "status": "pending"
+    },
+    "cross_links": {
+      "pubchem_cid": "1548943",
+      "hmdb": null,
+      "chebi": null,
+      "chembl": null,
+      "csd_refcode": null
+    }
+  },
+  "shape": {
+    "status": "pending",
+    "summary": {},
+    "ccs_measured": [],
+    "ccs_predicted": []
+  },
+  "detectability": {
+    "status": "partial",
+    "by_platform": [
+      {
+        "lab": "EES",
+        "platform": "GCMS",
+        "lod": {
+          "value": 0.305,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 0.923,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 1.0
+        }
+      },
+      {
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "lod": {
+          "value": 1.52,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 4.61,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9995
+        }
+      },
+      {
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "lod": {
+          "value": 1.48,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 4.49,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9993
+        }
+      }
+    ],
+    "not_detected": []
+  },
+  "matrix_effect": {
+    "status": "partial",
+    "by_matrix": [
+      {
+        "matrix": "breath",
+        "lab": "EES",
+        "platform": "GCMS",
+        "response_relative_to_neat": {
+          "value": 0.807,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.662,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "response_relative_to_neat": {
+          "value": 0.743,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.27,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "response_relative_to_neat": {
+          "value": 0.795,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.57,
+          "unit": "fold"
+        }
+      }
+    ]
+  },
+  "perception": {
+    "status": "pending",
+    "summary": {}
+  },
+  "provenance": {
+    "status": "partial",
+    "sops": [
+      {
+        "id": "SOP-EES-01",
+        "version": "1.0",
+        "lab": "EES"
+      },
+      {
+        "id": "SOP-LU-01",
+        "version": "1.0",
+        "lab": "LU"
+      },
+      {
+        "id": "SOP-UOM-01",
+        "version": "1.0",
+        "lab": "UOM"
+      }
+    ],
+    "labs": [
+      "EES",
+      "LU",
+      "UOM"
+    ],
+    "run_count": 63,
+    "blank_runs": 3,
+    "failed_runs": 0,
+    "file_counts": {
+      "raw_vendor": 63
+    },
+    "qc_flags": []
+  },
+  "derivation": {
+    "lod_definition": "LOD-LOQ v0.1",
+    "built_from": "DEMO-SYNTHETIC-0"
+  },
+  "release_id": "DEMO-SYNTHETIC-0"
+}

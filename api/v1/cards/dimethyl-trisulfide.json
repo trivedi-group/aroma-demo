@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.2.0",
+  "id": "AROMA-000015",
+  "slug": "dimethyl-trisulfide",
+  "card_version": 1,
+  "status": "measured",
+  "panel_role": "panel",
+  "contributed_by": [
+    "food"
+  ],
+  "identity": {
+    "status": "partial",
+    "name": "Dimethyl trisulfide",
+    "chemical_class": "Organosulfur",
+    "formula": "C2H6S3",
+    "monoisotopic_mass": 125.9632,
+    "adducts": [
+      {
+        "adduct": "[M+H]+",
+        "mz": 126.9704,
+        "basis": "calculated"
+      },
+      {
+        "adduct": "M+. (EI)",
+        "mz": 125.9626,
+        "basis": "calculated"
+      }
+    ],
+    "smiles": "CSSSC",
+    "inchikey": "YWHLKYXPLRWGSE-UHFFFAOYSA-N",
+    "reported_odour": {
+      "text": "ethereal; green (Arctander 1960, via Pyrfume)",
+      "reference": null
+    },
+    "identification": {
+      "status": "pending"
+    },
+    "cross_links": {
+      "pubchem_cid": "19310",
+      "hmdb": null,
+      "chebi": null,
+      "chembl": null,
+      "csd_refcode": null
+    }
+  },
+  "shape": {
+    "status": "pending",
+    "summary": {},
+    "ccs_measured": [],
+    "ccs_predicted": []
+  },
+  "detectability": {
+    "status": "partial",
+    "by_platform": [
+      {
+        "lab": "EES",
+        "platform": "GCMS",
+        "lod": {
+          "value": 1.26,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 3.81,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9996
+        }
+      },
+      {
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "lod": {
+          "value": 0.512,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 1.55,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9999
+        }
+      },
+      {
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "lod": {
+          "value": 0.642,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 1.95,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9999
+        }
+      },
+      {
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "lod": {
+          "value": 0.299,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 0.907,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 1.0
+        }
+      }
+    ],
+    "not_detected": []
+  },
+  "matrix_effect": {
+    "status": "partial",
+    "by_matrix": [
+      {
+        "matrix": "breath",
+        "lab": "EES",
+        "platform": "GCMS",
+        "response_relative_to_neat": {
+          "value": 0.84,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.0,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "response_relative_to_neat": {
+          "value": 0.594,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.15,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "response_relative_to_neat": {
+          "value": 0.68,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 2.48,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "response_relative_to_neat": {
+          "value": 0.775,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.76,
+          "unit": "fold"
+        }
+      }
+    ]
+  },
+  "perception": {
+    "status": "pending",
+    "summary": {}
+  },
+  "provenance": {
+    "status": "partial",
+    "sops": [
+      {
+        "id": "SOP-EES-01",
+        "version": "1.0",
+        "lab": "EES"
+      },
+      {
+        "id": "SOP-LU-01",
+        "version": "1.0",
+        "lab": "LU"
+      },
+      {
+        "id": "SOP-UOM-01",
+        "version": "1.0",
+        "lab": "UOM"
+      },
+      {
+        "id": "SOP-WYT-01",
+        "version": "1.0",
+        "lab": "WYT"
+      }
+    ],
+    "labs": [
+      "EES",
+      "LU",
+      "UOM",
+      "WYT"
+    ],
+    "run_count": 84,
+    "blank_runs": 4,
+    "failed_runs": 0,
+    "file_counts": {
+      "raw_vendor": 84
+    },
+    "qc_flags": []
+  },
+  "derivation": {
+    "lod_definition": "LOD-LOQ v0.1",
+    "built_from": "DEMO-SYNTHETIC-0"
+  },
+  "release_id": "DEMO-SYNTHETIC-0"
+}

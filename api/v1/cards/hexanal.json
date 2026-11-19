@@ -1,0 +1,209 @@
+{
+  "schema_version": "0.2.0",
+  "id": "AROMA-000012",
+  "slug": "hexanal",
+  "card_version": 1,
+  "status": "measured",
+  "panel_role": "panel",
+  "contributed_by": [
+    "food"
+  ],
+  "identity": {
+    "status": "partial",
+    "name": "Hexanal",
+    "chemical_class": "Aldehyde",
+    "formula": "C6H12O",
+    "monoisotopic_mass": 100.0888,
+    "adducts": [
+      {
+        "adduct": "[M+H]+",
+        "mz": 101.0961,
+        "basis": "calculated"
+      },
+      {
+        "adduct": "M+. (EI)",
+        "mz": 100.0883,
+        "basis": "calculated"
+      }
+    ],
+    "smiles": "CCCCCC=O",
+    "inchikey": "JARKCYVAAOWBJS-UHFFFAOYSA-N",
+    "reported_odour": {
+      "text": "apple; buttery; fatty; fruity; green; plum (Arctander 1960, via Pyrfume)",
+      "reference": null
+    },
+    "identification": {
+      "status": "pending"
+    },
+    "cross_links": {
+      "pubchem_cid": "6184",
+      "hmdb": null,
+      "chebi": null,
+      "chembl": null,
+      "csd_refcode": null
+    }
+  },
+  "shape": {
+    "status": "pending",
+    "summary": {},
+    "ccs_measured": [],
+    "ccs_predicted": []
+  },
+  "detectability": {
+    "status": "partial",
+    "by_platform": [
+      {
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "lod": {
+          "value": 1.41,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 4.26,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9992
+        }
+      },
+      {
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "lod": {
+          "value": 0.594,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 1.8,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 0.9999
+        }
+      },
+      {
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "lod": {
+          "value": 0.436,
+          "unit": "ng"
+        },
+        "loq": {
+          "value": 1.32,
+          "unit": "ng"
+        },
+        "n_levels": 5,
+        "n_runs": 10,
+        "definition": "LOD-LOQ v0.1",
+        "linearity": {
+          "range_low": 1.0,
+          "range_high": 50.0,
+          "unit": "ng",
+          "r_squared": 1.0
+        }
+      }
+    ],
+    "not_detected": []
+  },
+  "matrix_effect": {
+    "status": "partial",
+    "by_matrix": [
+      {
+        "matrix": "breath",
+        "lab": "LU",
+        "platform": "TDGCMS",
+        "response_relative_to_neat": {
+          "value": 0.967,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.59,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "UOM",
+        "platform": "GCQTOF",
+        "response_relative_to_neat": {
+          "value": 0.82,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 1.89,
+          "unit": "fold"
+        }
+      },
+      {
+        "matrix": "breath",
+        "lab": "WYT",
+        "platform": "TDQQQ",
+        "response_relative_to_neat": {
+          "value": 0.72,
+          "unit": "ratio"
+        },
+        "n_levels": 6,
+        "lod_shift_fold": {
+          "value": 0.559,
+          "unit": "fold"
+        }
+      }
+    ]
+  },
+  "perception": {
+    "status": "pending",
+    "summary": {}
+  },
+  "provenance": {
+    "status": "partial",
+    "sops": [
+      {
+        "id": "SOP-LU-01",
+        "version": "1.0",
+        "lab": "LU"
+      },
+      {
+        "id": "SOP-UOM-01",
+        "version": "1.0",
+        "lab": "UOM"
+      },
+      {
+        "id": "SOP-WYT-01",
+        "version": "1.0",
+        "lab": "WYT"
+      }
+    ],
+    "labs": [
+      "LU",
+      "UOM",
+      "WYT"
+    ],
+    "run_count": 63,
+    "blank_runs": 3,
+    "failed_runs": 0,
+    "file_counts": {
+      "raw_vendor": 63
+    },
+    "qc_flags": []
+  },
+  "derivation": {
+    "lod_definition": "LOD-LOQ v0.1",
+    "built_from": "DEMO-SYNTHETIC-0"
+  },
+  "release_id": "DEMO-SYNTHETIC-0"
+}
