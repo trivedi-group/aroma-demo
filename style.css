@@ -16,17 +16,18 @@ sup { font-size: 0.72em; line-height: 0; }
 .brand { font-weight: bold; font-size: 1.25rem; text-decoration: none; letter-spacing: 0.02em; }
 .brand span { font-weight: normal; }
 .site-header nav a { margin-left: 20px; font-size: 0.95rem; }
-.banner { background: #f2f2f2; font-size: 0.9rem; padding: 10px 0; }
+.banner { background: #f2f2f2; font-size: 0.9rem; padding: 10px 0; text-align: justify; }
 
 main { padding-top: 28px; padding-bottom: 56px; outline: none; }
 h1 { font-size: 2rem; margin: 0 0 6px; line-height: 1.2; }
 h2 { font-size: 1.2rem; margin: 0 0 12px; }
 h3 { font-size: 1rem; margin: 20px 0 8px; }
-p { margin: 0 0 12px; max-width: 74ch; }
+p { margin: 0 0 12px; max-width: none; text-align: justify; hyphens: auto; }
+.crumbs, .count { text-align: left; hyphens: manual; }
 .muted { color: #595959; }
 .small { font-size: 0.875rem; }
 
-.lede { font-size: 1.05rem; max-width: 72ch; margin-bottom: 20px; }
+.lede { font-size: 1.05rem; max-width: none; margin-bottom: 20px; }
 
 .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin: 18px 0 8px; }
 .controls label { display: block; font-size: 0.8rem; font-weight: bold; margin-bottom: 4px; }
@@ -83,7 +84,7 @@ dl.kv dd { margin: 0; overflow-wrap: anywhere; }
 .pending { color: #595959; font-style: italic; }
 td.pending, dd.pending { border: 0; }
 tr.template td { color: #595959; font-style: italic; border-bottom: 1px dashed #595959; }
-.note { border: 1px dashed #595959; padding: 8px 12px; margin: 10px 0 14px; font-size: 0.88rem; max-width: 80ch; }
+.note { border: 1px dashed #595959; padding: 8px 12px; margin: 10px 0 14px; font-size: 0.88rem; max-width: none; text-align: justify; }
 .tablewrap { overflow-x: auto; margin-bottom: 12px; }
 
 .axis { margin: 6px 0 4px; }
@@ -100,7 +101,7 @@ tr.template td { color: #595959; font-style: italic; border-bottom: 1px dashed #
 .site-footer p { margin-bottom: 6px; }
 
 .about h2 { margin-top: 26px; }
-.about ol, .about ul { max-width: 74ch; padding-left: 22px; }
+.about ol, .about ul { max-width: none; padding-left: 22px; text-align: justify; hyphens: auto; }
 .about li { margin-bottom: 6px; }
 
 @media (max-width: 860px) {
@@ -117,8 +118,9 @@ tr.template td { color: #595959; font-style: italic; border-bottom: 1px dashed #
 
 /* Data type colours. Each is chosen to stay distinguishable in common forms of colour blindness. */
 .t-identity { color-scheme: light; }
-.legend { display: flex; flex-wrap: wrap; gap: 10px 26px; list-style: none; padding: 10px 0; margin: 0 0 14px; font-size: 0.82rem; }
-.legend li { display: flex; gap: 8px; align-items: flex-start; max-width: 250px; }
+.legend { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 28px; list-style: none; padding: 10px 0; margin: 0 0 14px; font-size: 0.82rem; }
+.legend li { text-align: justify; hyphens: auto; display: flex; gap: 8px; align-items: flex-start; max-width: none; }
+@media (max-width: 760px) { .legend { grid-template-columns: 1fr; } }
 .sw { width: 16px; height: 16px; flex: none; margin-top: 2px; border: 1px solid #000; }
 .sw.t-identity { background: #1f5fa8; border-color: #1f5fa8; }
 .sw.t-shape { background: #9c2a7f; border-color: #9c2a7f; }
