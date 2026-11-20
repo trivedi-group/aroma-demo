@@ -3,14 +3,14 @@
   "id": "AROMA-000006",
   "slug": "isoprene",
   "card_version": 1,
-  "status": "measured",
+  "status": "qc_passed",
   "panel_role": "anchor",
   "contributed_by": [
     "breath",
     "outdoor_air"
   ],
   "identity": {
-    "status": "partial",
+    "status": "complete",
     "name": "Isoprene",
     "chemical_class": "Hemiterpene",
     "formula": "C5H8",
@@ -45,7 +45,7 @@
     }
   },
   "shape": {
-    "status": "partial",
+    "status": "complete",
     "summary": {
       "ccs": {
         "value": 137.3,
@@ -92,7 +92,7 @@
     "ccs_predicted": []
   },
   "detectability": {
-    "status": "partial",
+    "status": "complete",
     "by_platform": [
       {
         "lab": "EES",
@@ -182,7 +182,7 @@
     "not_detected": []
   },
   "matrix_effect": {
-    "status": "partial",
+    "status": "complete",
     "by_matrix": [
       {
         "matrix": "breath",
@@ -243,11 +243,34 @@
     ]
   },
   "perception": {
-    "status": "pending",
-    "summary": {}
+    "status": "complete",
+    "summary": {
+      "detection_level": {
+        "value": 0.23,
+        "unit": "ng"
+      },
+      "quality_change_level": {
+        "value": 3.1,
+        "unit": "ng"
+      },
+      "gco_neat": {
+        "value": 0.15,
+        "unit": "ng"
+      },
+      "gco_in_matrix": {
+        "value": 0.51,
+        "unit": "ng"
+      },
+      "intensity": 5.5,
+      "intensity_scale": "0 to 10",
+      "descriptor": "green",
+      "lexicon_version": "LEX v0.1",
+      "assessors_n": 12,
+      "level_unit": "ng"
+    }
   },
   "provenance": {
-    "status": "partial",
+    "status": "complete",
     "sops": [
       {
         "id": "SOP-EES-01",

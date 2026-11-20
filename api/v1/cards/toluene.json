@@ -3,13 +3,13 @@
   "id": "AROMA-000011",
   "slug": "toluene",
   "card_version": 1,
-  "status": "measured",
+  "status": "qc_passed",
   "panel_role": "panel",
   "contributed_by": [
     "outdoor_air"
   ],
   "identity": {
-    "status": "partial",
+    "status": "complete",
     "name": "Toluene",
     "chemical_class": "Aromatic hydrocarbon",
     "formula": "C7H8",
@@ -44,7 +44,7 @@
     }
   },
   "shape": {
-    "status": "partial",
+    "status": "complete",
     "summary": {
       "ccs": {
         "value": 150.5,
@@ -91,7 +91,7 @@
     "ccs_predicted": []
   },
   "detectability": {
-    "status": "partial",
+    "status": "complete",
     "by_platform": [
       {
         "lab": "EES",
@@ -181,7 +181,7 @@
     "not_detected": []
   },
   "matrix_effect": {
-    "status": "partial",
+    "status": "complete",
     "by_matrix": [
       {
         "matrix": "breath",
@@ -242,11 +242,34 @@
     ]
   },
   "perception": {
-    "status": "pending",
-    "summary": {}
+    "status": "complete",
+    "summary": {
+      "detection_level": {
+        "value": 4.14,
+        "unit": "ng"
+      },
+      "quality_change_level": {
+        "value": 35.8,
+        "unit": "ng"
+      },
+      "gco_neat": {
+        "value": 5.67,
+        "unit": "ng"
+      },
+      "gco_in_matrix": {
+        "value": 21.6,
+        "unit": "ng"
+      },
+      "intensity": 4.2,
+      "intensity_scale": "0 to 10",
+      "descriptor": "green",
+      "lexicon_version": "LEX v0.1",
+      "assessors_n": 12,
+      "level_unit": "ng"
+    }
   },
   "provenance": {
-    "status": "partial",
+    "status": "complete",
     "sops": [
       {
         "id": "SOP-EES-01",

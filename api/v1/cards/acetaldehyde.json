@@ -3,13 +3,13 @@
   "id": "AROMA-000002",
   "slug": "acetaldehyde",
   "card_version": 1,
-  "status": "measured",
+  "status": "qc_passed",
   "panel_role": "panel",
   "contributed_by": [
     "breath"
   ],
   "identity": {
-    "status": "partial",
+    "status": "complete",
     "name": "Acetaldehyde",
     "chemical_class": "Aldehyde",
     "formula": "C2H4O",
@@ -44,7 +44,7 @@
     }
   },
   "shape": {
-    "status": "partial",
+    "status": "complete",
     "summary": {
       "ccs": {
         "value": 123.9,
@@ -91,7 +91,7 @@
     "ccs_predicted": []
   },
   "detectability": {
-    "status": "partial",
+    "status": "complete",
     "by_platform": [
       {
         "lab": "EES",
@@ -181,7 +181,7 @@
     "not_detected": []
   },
   "matrix_effect": {
-    "status": "partial",
+    "status": "complete",
     "by_matrix": [
       {
         "matrix": "breath",
@@ -242,11 +242,34 @@
     ]
   },
   "perception": {
-    "status": "pending",
-    "summary": {}
+    "status": "complete",
+    "summary": {
+      "detection_level": {
+        "value": 2.89,
+        "unit": "ng"
+      },
+      "quality_change_level": {
+        "value": 35.3,
+        "unit": "ng"
+      },
+      "gco_neat": {
+        "value": 5.05,
+        "unit": "ng"
+      },
+      "gco_in_matrix": {
+        "value": 21.5,
+        "unit": "ng"
+      },
+      "intensity": 3.2,
+      "intensity_scale": "0 to 10",
+      "descriptor": "ethereal",
+      "lexicon_version": "LEX v0.1",
+      "assessors_n": 12,
+      "level_unit": "ng"
+    }
   },
   "provenance": {
-    "status": "partial",
+    "status": "complete",
     "sops": [
       {
         "id": "SOP-EES-01",

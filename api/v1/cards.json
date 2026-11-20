@@ -14,14 +14,14 @@
       ],
       "panel_role": "panel",
       "reported_odour": "floral, jasmine at trace level, faecal when concentrated",
-      "status": "measured",
+      "status": "qc_passed",
       "sections": {
-        "identity": "partial",
-        "shape": "partial",
-        "detectability": "partial",
-        "matrix_effect": "partial",
-        "perception": "pending",
-        "provenance": "partial"
+        "identity": "complete",
+        "shape": "complete",
+        "detectability": "complete",
+        "matrix_effect": "complete",
+        "perception": "complete",
+        "provenance": "complete"
       },
       "url": "api/v1/cards/indole.json"
     },
@@ -37,14 +37,14 @@
       ],
       "panel_role": "panel",
       "reported_odour": "ethereal; winey (Arctander 1960, via Pyrfume)",
-      "status": "measured",
+      "status": "qc_passed",
       "sections": {
-        "identity": "partial",
-        "shape": "partial",
-        "detectability": "partial",
-        "matrix_effect": "partial",
-        "perception": "pending",
-        "provenance": "partial"
+        "identity": "complete",
+        "shape": "complete",
+        "detectability": "complete",
+        "matrix_effect": "complete",
+        "perception": "complete",
+        "provenance": "complete"
       },
       "url": "api/v1/cards/acetaldehyde.json"
     },
@@ -130,14 +130,14 @@
       ],
       "panel_role": "anchor",
       "reported_odour": "",
-      "status": "measured",
+      "status": "qc_passed",
       "sections": {
-        "identity": "partial",
-        "shape": "partial",
-        "detectability": "partial",
-        "matrix_effect": "partial",
-        "perception": "pending",
-        "provenance": "partial"
+        "identity": "complete",
+        "shape": "complete",
+        "detectability": "complete",
+        "matrix_effect": "complete",
+        "perception": "complete",
+        "provenance": "complete"
       },
       "url": "api/v1/cards/isoprene.json"
     },
@@ -243,14 +243,14 @@
       ],
       "panel_role": "panel",
       "reported_odour": "",
-      "status": "measured",
+      "status": "qc_passed",
       "sections": {
-        "identity": "partial",
-        "shape": "partial",
-        "detectability": "partial",
-        "matrix_effect": "partial",
-        "perception": "pending",
-        "provenance": "partial"
+        "identity": "complete",
+        "shape": "complete",
+        "detectability": "complete",
+        "matrix_effect": "complete",
+        "perception": "complete",
+        "provenance": "complete"
       },
       "url": "api/v1/cards/toluene.json"
     },
@@ -381,14 +381,14 @@
       ],
       "panel_role": "panel",
       "reported_odour": "caramelic; fruity; pineapple (Arctander 1960, via Pyrfume)",
-      "status": "measured",
+      "status": "qc_passed",
       "sections": {
-        "identity": "partial",
-        "shape": "partial",
-        "detectability": "partial",
-        "matrix_effect": "partial",
-        "perception": "pending",
-        "provenance": "partial"
+        "identity": "complete",
+        "shape": "complete",
+        "detectability": "complete",
+        "matrix_effect": "complete",
+        "perception": "complete",
+        "provenance": "complete"
       },
       "url": "api/v1/cards/furaneol.json"
     },

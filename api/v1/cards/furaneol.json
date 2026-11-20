@@ -3,13 +3,13 @@
   "id": "AROMA-000017",
   "slug": "furaneol",
   "card_version": 1,
-  "status": "measured",
+  "status": "qc_passed",
   "panel_role": "panel",
   "contributed_by": [
     "food"
   ],
   "identity": {
-    "status": "partial",
+    "status": "complete",
     "name": "Furaneol",
     "chemical_class": "Furanone",
     "formula": "C6H8O3",
@@ -44,7 +44,7 @@
     }
   },
   "shape": {
-    "status": "partial",
+    "status": "complete",
     "summary": {
       "ccs": {
         "value": 170.2,
@@ -91,7 +91,7 @@
     "ccs_predicted": []
   },
   "detectability": {
-    "status": "partial",
+    "status": "complete",
     "by_platform": [
       {
         "lab": "EES",
@@ -160,7 +160,7 @@
     "not_detected": []
   },
   "matrix_effect": {
-    "status": "partial",
+    "status": "complete",
     "by_matrix": [
       {
         "matrix": "breath",
@@ -207,11 +207,34 @@
     ]
   },
   "perception": {
-    "status": "pending",
-    "summary": {}
+    "status": "complete",
+    "summary": {
+      "detection_level": {
+        "value": 1.04,
+        "unit": "ng"
+      },
+      "quality_change_level": {
+        "value": 13.4,
+        "unit": "ng"
+      },
+      "gco_neat": {
+        "value": 1.14,
+        "unit": "ng"
+      },
+      "gco_in_matrix": {
+        "value": 3.97,
+        "unit": "ng"
+      },
+      "intensity": 6.6,
+      "intensity_scale": "0 to 10",
+      "descriptor": "caramelic",
+      "lexicon_version": "LEX v0.1",
+      "assessors_n": 12,
+      "level_unit": "ng"
+    }
   },
   "provenance": {
-    "status": "partial",
+    "status": "complete",
     "sops": [
       {
         "id": "SOP-EES-01",
