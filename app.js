@@ -402,7 +402,7 @@ function renderCard(card) {
   var steps = LIFECYCLE.map(function (s, i) {
     return '<li class="' + (i < current ? "done" : (i === current ? "now" : "")) + '">' + s[1] + "</li>";
   }).join("");
-  var versionText = "version " + card.schema_version.split(".").slice(0, 2).join(".") + ", Sprint pilot · example layout";
+  var versionText = "version " + card.schema_version.split(".").slice(0, 2).join(".") + ", Sprint pilot, example layout";
 
   main.innerHTML =
     '<p class="crumbs"><a href="#/">All cards</a> / ' + esc(card.identity.name) + "</p>" +
@@ -410,7 +410,7 @@ function renderCard(card) {
     '<span class="small">Download: <a href="api/v1/cards/' + esc(card.slug) + '.json">JSON record</a></span></div>' +
     legend() +
     '<article class="oc" aria-label="OlfactoCard ' + esc(card.id) + '">' +
-    '<header class="oc-head"><div><b>OlfactoCard</b><span>' + esc(card.id) + " · " + esc(card.identity.name) + "</span></div>" +
+    '<header class="oc-head"><div><b>OlfactoCard</b><span>' + esc(card.id) + ", " + esc(card.identity.name) + "</span></div>" +
     "<div>" + esc(versionText) + "</div></header>" +
     '<div class="oc-grid">' +
     '<div class="col">' + identityBlock(card) + "</div>" +
