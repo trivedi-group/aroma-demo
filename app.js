@@ -174,8 +174,7 @@ function renderIndex() {
     '<p class="count" id="count" aria-live="polite"></p>' +
     '<div class="tablewrap"><table><thead><tr><th>ID</th><th>Compound</th><th>Formula</th><th class="num">Mass (Da)</th>' +
     '<th class="hide-sm">Class</th><th class="hide-sm">Expected in</th><th class="hide-sm">Role</th><th>Sections</th></tr></thead>' +
-    '<tbody id="rows"></tbody></table></div>' +
-    '<p class="small muted">Sections, left to right: identity, shape, detectability, matrix effect, perception, provenance and QC, coloured by data type. Empty square, pending. Half square, partial. Filled square, complete.</p>';
+    '<tbody id="rows"></tbody></table></div>';
 
   var q = document.getElementById("q");
   q.value = filters.q;
